@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Interactive rating component</title>
+	</head>
+
+	<body>
+		<main>
+			<div id="card">
+				<div id="data1">
+					<img src="images/icon-star.svg" class="star" alt="Star shaped icon" />
+					<header>How did we do?</header>
+					<div class="p" style="text-align: left">
+						Please let us know how we did with your support request. All
+						feedback is appreciated to help us improve our offering!
+					</div>
+					<section class="rating">
+						<button onclick="storeValue('1');changeColor(this)">
+							1
+						</button>
+						<button onclick="storeValue('2');changeColor(this)">
+							2
+						</button>
+						<button onclick="storeValue('3');changeColor(this)">
+							3
+						</button>
+						<button onclick="storeValue('4');changeColor(this)">
+							4
+						</button>
+						<button onclick="storeValue('5');changeColor(this)">
+							5
+						</button>
+					</section>
+
+					<button class="submit" onclick="performOperation()">SUBMIT</button>
+				</div>
+
+				<div id="data2">
+					<img
+						src="images/illustration-thank-you.svg"
+						class="thankyou"
+						alt="Thank you image"
+					/>
+					<div class="rating-display">
+						You selected <span class="rating-result"></span> out of 5
+					</div>
+					<header>Thank you!</header>
+					<div class="p">
+						We appreciate you taking the time to give a rating. If you ever need
+						more support, don’t hesitate to get in touch!
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
